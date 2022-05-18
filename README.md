@@ -4,7 +4,8 @@
 
 This is the backend for the employees service. <br/>
 It's a RESTful API used for logging employees in and to provide a list of all employees. <br/>
-Built with Node.js, Express, Mongoose and Joi.
+Built with Node.js, Express, Mongoose and Joi. <br/>
+[Check the client repo!](https://github.com/Refaelbenzvi24/frontend-employees-serveice)
 
 ## Usage
 
@@ -21,6 +22,5 @@ Built with Node.js, Express, Mongoose and Joi.
 - ```npm run docker:prod```: Build and run the docker image for production.
 - ```npm run docker:dev```: Build and run the docker image for development - required for development, to have a MongoDB
   server.
-
 
 > Note: No solution was built for writing data into the DB, the data must be inserted manually!
