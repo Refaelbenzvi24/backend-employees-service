@@ -5,14 +5,14 @@ const router = express.Router()
 
 router.route('/')
     /**
-     * @api {get} v1/employee list
+     * @api {get} v1/employee List
      * @apiDescription Get an accessToken
      * @apiVersion 1.0.0
-     * @apiName Login
-     * @apiGroup Auth
+     * @apiName ListEmployees
+     * @apiGroup Employee
      * @apiPermission public
      *
-     * @apiSuccess {array}      employees Employee's array
+     * @apiSuccess {array}  List of employee.
      */
     .get(controller.list)
 

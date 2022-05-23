@@ -26,7 +26,7 @@ router.route('/login')
      * @apiSuccess  {String}  Employee.password       Employee's password
      * @apiSuccess  {String}  Employee.startDate      Employee's startDate
      *
-     * @apiError (Bad Request 400)  ValidationError  Some parameters may contain invalid values
+     * @apiError (Bad Request 400)   ValidationError  Some parameters may contain invalid values
      * @apiError (Unauthorized 401)  Unauthorized     Incorrect email or password
      */
     .get(validate(login), controller.login)

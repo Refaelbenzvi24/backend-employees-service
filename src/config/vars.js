@@ -11,9 +11,9 @@ if (process.env.NODE_ENV === 'development') {
 env.config()
 
 module.exports = {
-    env:                               process.env.NODE_ENV || 'development',
-    port:                              process.env.PORT || 8080,
-    mongo:                             {
-        uri: process.env.MONGO_URI,
+    env:   process.env.NODE_ENV || 'development',
+    port:  process.env.PORT || 8080,
+    mongo: {
+        uri: process.env.NODE_ENV === 'test' ? process.env.MONGO_URI_TESTS : process.env.MONGO_URI,
     },
 }

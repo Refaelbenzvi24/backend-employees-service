@@ -6,7 +6,6 @@ import mongoose from 'mongoose'
  * @private
  */
 const employeeSchema = new mongoose.Schema({
-    _id:       false,
     id:        {
         type:     Number,
         required: true,
@@ -33,7 +32,7 @@ const employeeSchema = new mongoose.Schema({
         maxlength: 128,
     },
     startDate: {
-        type:     Date,
+        type:     String,
         required: true,
     },
     managerId: {
@@ -51,18 +50,14 @@ const employeeSchema = new mongoose.Schema({
  */
 employeeSchema.statics = {
     /**
-     * List users in descending order of 'createdAt' timestamp.
-     * @param {number} skip - Number of users to be skipped.
-     * @param {number} limit - Limit number of users to be returned.
+     * List users in descending order of 'id' value.
      * @returns {Promise<User[]>}
      */
-    list({page = 1, perPage = 30}) {
+    list() {
         return this.find()
             .sort({id: 1})
-            .skip(perPage * (page - 1))
-            .limit(perPage)
             .exec()
-    },
+    }
 }
 
 /**
