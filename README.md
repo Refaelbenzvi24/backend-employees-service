@@ -3,7 +3,7 @@
 ## Description
 
 This is the backend for the employees service. <br/>
-It's a RESTful API used for logging employees in and to provide a list of all employees. <br/>
+It's a RESTful API used for log employees in and to provide a list of all employees. <br/>
 Built with Node.js, Express, Mongoose and Joi. <br/>
 [Check the client repo!](https://github.com/Refaelbenzvi24/frontend-employees-serveice)
 
